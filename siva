@@ -1,0 +1,133 @@
+
+
+git init   	=====> To initialize the local git repositery
+git status	=====> To get the status 	
+=================================
+Add the user in Git
+Command : git config --global user.name <username>
+Ex : git config --global user.name siva
+=====================================
+Add the user mail id in Git
+Command : git config --global user.name <maild id>
+Ex : git config --global user.email siva@gmail.com
+======================================
+List out the  
+git config --global --list
+======================================
+How to add the new file in Git
+
+Command : git add <file Name>
+Ex : git add myfile.txt
+
+[root@ip-172-31-41-212 FIRST_PROJECT]# git add myfile.txt
+
+
+Once add the file need commit.
+Command : git commit -m "some content"
+Ex : git commit -m "
+
+
+[root@ip-172-31-41-212 FIRST_PROJECT]# git commit -m "created the myfile"
+[master (root-commit) 9e41c4f] created the myfile
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 myfile.txt
+======================================================== 
+How to get the Logs for after commted the file :
+Command : git <file Name>
+Ex : 
+
+[root@ip-172-31-41-212 FIRST_PROJECT]# git log
+commit 9e41c4f1957c123e4716d29c9ab026b9ec918857 (HEAD -> master)   ===========>
+Author: siva <siva@gmail.com>
+Date:   Thu Apr 27 17:06:27 2023 +0000
+
+    created the myfile
+
+=======================================================================
+
+How to add the modified/added/deleted content in file with git.
+
+Step 1: First modify the data.
+vi myfile.txt
+
+Step 2: add the file in git after modified/added/deleted content in file 
+
+Command : git add <filename> 
+git add myfile.txt
+
+Step 3: Commit the file in git
+Command : git commit -m "some content"
+
+Ex : 
+[root@ip-172-31-41-212 FIRST_PROJECT]# git commit -m "modified"
+[master 3a1324c] modified
+ 3 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 sai.txt
+ create mode 100644 veera.txt
+
+Step 4: Get the logs in git using below command 
+Command : git log
+
+Ex : 
+
+[root@ip-172-31-41-212 FIRST_PROJECT]# git log
+commit 3a1324c9a6b0237af2aa54e66ff7f02a4ee22908 (HEAD -> master)
+Author: siva <siva@gmail.com>
+Date:   Thu Apr 27 17:23:32 2023 +0000
+
+    modified
+
+commit 087966763d5dce4ae0c96e5eb1a53f1d824ab10a  ================>commit ID with help to get the all details of the changes.
+Author: siva <siva@gmail.com>
+Date:   Thu Apr 27 17:17:32 2023 +0000
+
+    added files
+
+commit fc12c6c335805b0b0e1438a57a8b514f2767f006
+Author: siva <siva@gmail.com>
+Date:   Thu Apr 27 17:15:13 2023 +0000
+
+    modified
+
+commit 9e41c4f1957c123e4716d29c9ab026b9ec918857
+Author: siva <siva@gmail.com>
+Date:   Thu Apr 27 17:06:27 2023 +0000
+=======================================
+    created the myfile
+=====================================
+How to get the commit ID details 
+Command : git show <commit ID>
+
+Ex : 
+[root@ip-172-31-41-212 FIRST_PROJECT]# git show 3a1324c9a6b0237af2aa54e66ff7f02a4ee22908
+commit 3a1324c9a6b0237af2aa54e66ff7f02a4ee22908 (HEAD -> master)
+Author: siva <siva@gmail.com>
+Date:   Thu Apr 27 17:23:32 2023 +0000
+
+    modified
+
+diff --git a/myfile.txt b/myfile.txt
+index 71482ad..4de16f6 100644
+--- a/myfile.txt
++++ b/myfile.txt
+@@ -1,3 +1,4 @@
+ SIVA PRASAD
+ HI HELLO
+-MY NAME SIVA PRASAD
++MY NAME IS SIVA PRASAD
++I HAVE 4.2 YEARS OF EXPERENICE IN IT AS LINUX ADMIN
+diff --git a/sai.txt b/sai.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/veera.txt b/veera.txt
+new file mode 100644
+index 0000000..e69de29
+
+==================================================
+
+How to add the multiple files in git
+Command : git add .
+Ex : git add .
+
+===================================================================
+How to revert the 
